@@ -152,7 +152,9 @@
         width: 320px;
         max-width: 100%;
         transform: translateX(-100%);
-        transition: transform linear 0.3s;
+        transition: transform linear 0.3s, opacity linear 0.3s;
+        opacity: 0;
+        will-change: opacity, transform;
     }
 
     .category__heading {
@@ -175,6 +177,7 @@
 
     .nav__input:checked~.category {
         transform: translateX(0%);
+        opacity: 1;
     }
 
     .nav__input:checked~.nav__overlay {
